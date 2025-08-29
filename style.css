@@ -1,0 +1,118 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.site-header {
+  background: #0077cc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navbar using Flexbox */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #005fa3;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  display: block;
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #004680;
+  border-radius: 4px;
+}
+
+/* Main layout using CSS Grid */
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background: #eaf6ff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.content {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Cards using Flexbox */
+.card-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  background: #f1f1f1;
+  border: 2px solid #ccc;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Footer */
+.site-footer {
+  background: #0077cc;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* -------------------------------
+   Responsive Design with Media Queries
+-------------------------------- */
+
+/* Tablet view */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr; /* Sidebar stacks above content */
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .card-container {
+    flex-direction: column; /* Cards stack vertically */
+  }
+  .navbar li {
+    margin: 10px 0;
+  }
+}
